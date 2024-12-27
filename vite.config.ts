@@ -10,12 +10,17 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  server: {
+    port: 3000,
+  },
   build: {
     outDir: 'dist',
     emptyOutDir: true,
     rollupOptions: {
       output: {
-        manualChunks: undefined
+        entryFileNames: 'assets/[name]-[hash].js',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]'
       }
     }
   }
