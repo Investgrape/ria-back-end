@@ -11,7 +11,7 @@ import ClientAgreements from './components/ClientAgreements';
 
 const App: React.FC = () => {
   return (
-    <Router>
+    <Router basename="/">
       <Layout>
         <Routes>
           <Route path="/dashboard" element={<DashboardContent />} />
